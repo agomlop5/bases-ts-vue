@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import CarrulusEmendi from './components/CarrulusEmendi.vue';
 import { useProducta } from './composables/useProducta.ts';
+import Pokemoninfo from './components/Pokemoninfo.vue';
 
 // import DesesArr from './typescript/DesesArr.vue';
 // import DesesObj from './typescript/DesesObj.vue';
@@ -48,5 +49,9 @@ const { producta, quantitatemIncrementa, quantitatemDecrementa } = useProducta()
   @decrementum="quantitatemDecrementa (productum.id)"
   @incrementum="quantitatemIncrementa (productum.id)"
  />
+
+<Suspense>
+    <Pokemoninfo />
+</Suspense>
 
 </template>
